@@ -10,7 +10,6 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 
-export const dynamicParams = false;
 export const dynamic = "force-static";
 
 const geistSans = Geist({
@@ -34,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic={false}>
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
